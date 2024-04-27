@@ -6,24 +6,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'styles.css'%}">
-  <title>Document</title>
+  <title>APIBuilding</title>
+    <style>
+        /* Card styling */
+      
+        .card {
+            width: 300px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+      
+
+        /* Header styling */
+        .card h2{
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Response styling */
+        .card p {
+            font-size: 1rem;
+            color: #FFFF00;
+        }
+    </style>
 </head>
 <body>
 
   <!-- Using CSS, style the random fact, Random Student, & Random Image -->
   <!-- Use your own colors create cards for the random facts and students,  -->
   <!-- Pro Tip: You can use multiple pages -->
-  <!-- Pro Tip: Impliment a  refresh/reload button in every page  -->
+  <!-- Pro Tip: Implement a  refresh/reload button in every page  --> <hr/>
+  <h1><p>HACKATHON</p>
+    <p>FEB 2024</p</h1>
+  <hr/>
+  <div class="card">
   <h1>Random Fact</h1>
-  {{fact}}
-
+    {{fact}}
+    <p><button id= "refresh-button">Refresh</button></p>
+  </div>
+  <div class="card">
   <h1>Random Student</h1>
   {{name}}
-
-
+  <p> <button id="refresh-button">Refresh</button></p>
+  </div>
+  <div class= "card">
   <h1>Random Image</h1>
 
   <img src="{{dog}}" alt="">
   <!-- {{dog}} -->
+        <p>  <button id="refresh-button">Refresh</button></p>
+  </div>
 </body>
-</html>
+<hr/>
+  
+    </html>

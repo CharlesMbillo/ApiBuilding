@@ -1,5 +1,6 @@
 import requests
-from django.shortcuts import render 
+from django.shortcuts import render
+
 
 def index(request):
   response = requests.get('https://uselessfacts.jsph.pl/random.json?language=en')
@@ -17,4 +18,4 @@ def index(request):
   data2 = response2.json()
   name = data2[0]['name']
   
-  return render(request, 'templates/index.html', {'fact': fact, 'dog': dog,  'name': name})
+  return render(request, 'templates/index.html', {'fact': fact, 'name': name, 'dog': dog})
